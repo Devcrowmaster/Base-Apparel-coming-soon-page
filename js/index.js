@@ -8,6 +8,9 @@ form.addEventListener('submit', e =>{
 
   if(!validateEmail(email.value)){
     form.classList.add('error');
+    success.classList.remove('success');
+    success.classList.add('error-valid');
+    success.innerHTML = 'Please provide a valid email';
   }else{
     form.classList.remove('error');
     success.classList.remove('error-valid');
